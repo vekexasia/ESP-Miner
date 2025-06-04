@@ -112,9 +112,6 @@ int16_t VCORE_get_voltage_mv(GlobalState * GLOBAL_STATE)
 
 esp_err_t VCORE_check_fault(GlobalState * GLOBAL_STATE) 
 {
-    if (GLOBAL_STATE->DEVICE_CONFIG.TPS546) {
-        ESP_RETURN_ON_ERROR(TPS546_check_status(GLOBAL_STATE), TAG, "TPS546 check status failed!");
-    }
     return ESP_OK;
 }
 
